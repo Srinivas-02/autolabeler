@@ -98,6 +98,7 @@ def run_second_code():
                     })
                 if selected_option == 'person':
                     ontology = CaptionOntology({
+                        "Human head": "head",
                         "Person" : "person"
                     })
                 DEVICE = torch.device('cpu')
@@ -232,7 +233,7 @@ left_frame.place(x=0, y=0, relheight=1)
 left_frame.configure(bg='lightgray')
 
 # open button
-a = Image.open("F:\\dsk\\open-folder.png")
+a = Image.open("./open-folder.png")
 a=a.resize((40,40))
 file_png = ImageTk.PhotoImage(a)
 file_button = tk.Button(left_frame, image=file_png, command=openimage)
@@ -246,7 +247,7 @@ option_menu.pack(pady=20)
 
 
 # startbutton
-b = Image.open("F:\\dsk\\play.png")
+b = Image.open("./play.png")
 b=b.resize((40,40))
 file_png2 = ImageTk.PhotoImage(b)
 start_button = tk.Button(left_frame, image=file_png2, command= run_second_code)
